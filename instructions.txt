@@ -1,0 +1,60 @@
+1. What is Mongoose?
+    Mongoose is a JavaScript object-oriented programming library that creates a connection between MongoDB and the Express web application framework. 
+
+2. Official WEbsite 
+    https://mongoosejs.com/
+
+    Quide or documentation 
+    https://mongoosejs.com/docs/guide.html
+
+3. Installation 
+    Note => You must have MongoDB and Node js installed in your system...
+    
+    npm install mongoose --save
+
+4. connect to Mongoose 
+    const mongoose = require('mongoose');
+
+    if you  are connecting with your local environment with mongo db...
+
+    mongoose.connect(
+        "mongodb://localhost/dbname", 
+    () => {
+    console.log('connected successfully');
+    },
+    e => console.log(e)
+    )
+
+    short 
+    mongoose.connect("mongodb://localhost/dbname");
+
+5. Model 
+    Create A model file for your table also called schema file 
+    for example you can see User.js 
+    User.js is a user model file 
+
+6. Save data in table 
+    firstly import schema file  
+        const User = require('./User');
+    then add data 
+        const user = new User({name: "John", age: 30});
+        user.save().then(()=>console.log("User Saved"));
+
+    Can check in index.js file 
+
+7. schema Types 
+    can see in User.js file 
+
+8. schema Validations 
+    can see in User.js file 
+    
+9. Query Basics 
+    can see in index.js file on line number 55 
+    
+10. Schema Methods/Virtuals
+    can see on User.js on line no . 42
+    
+11. Schema Middleware
+    can see on User.js on line no . 60
+
+=========================================================
